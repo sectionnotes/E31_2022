@@ -33,7 +33,8 @@ const requestListener = function (req, res) {
 
   console.log('html:', mime.lookup('html'));
   console.log('jpg', mime.lookup('jpg'));
-  // stringifying cause I've got an object; turn that into a string in order to send it back to the browser
+  // stringifying cause I've got an object; 
+  // turn that into a string in order to send it back to the browser
   // res.end(JSON.stringify(data));
 
   res.end(JSON.stringify(data, null, 2));
