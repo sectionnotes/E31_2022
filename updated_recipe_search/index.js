@@ -15,6 +15,7 @@ const requestListener = function (req, res) {
   let fullUrl = 'http://' + req.headers.host + req.url;
   var theUrl = new URL(fullUrl);
   console.log('url ', fullUrl);
+  
   // 'search' is the name in the name-value pair, comes from the browser
   let searchString = theUrl.searchParams.get('search');
   console.log('search: ',searchString);
@@ -26,7 +27,7 @@ const requestListener = function (req, res) {
   // Send the response as JSON:
   // res.writeHead(200, {'Content-type': 'application/json'});
   //
-  // replace above with 
+  // replace above with
   let mimeType = mime.lookup('json');
   res.writeHead(200, {'Content-type': mimeType});
 
