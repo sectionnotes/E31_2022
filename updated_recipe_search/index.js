@@ -1,6 +1,6 @@
 // I'm going to create a simple recipe server.
-// It'll accept a search term sent over HTTP, search a
-// set of recipes, and return matching results in JSON format.
+// It'll accept a search term sent over HTTP.
+// Search a set of recipes, and return matching results in JSON format.
 //
 const mime = require('mime-types');
 const recipesArray = require('./load_data');
@@ -15,7 +15,7 @@ const requestListener = function (req, res) {
   let fullUrl = 'http://' + req.headers.host + req.url;
   var theUrl = new URL(fullUrl);
   console.log('url ', fullUrl);
-  
+
   // 'search' is the name in the name-value pair, comes from the browser
   let searchString = theUrl.searchParams.get('search');
   console.log('search: ',searchString);
