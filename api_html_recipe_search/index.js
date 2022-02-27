@@ -38,9 +38,6 @@ const requestListener = function (req, res) {
   // Parse the url to extract the query string parameters.
   // The url will be like this:  http://localhost:3000?search=soup
 
-
-  //  const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
-  // url.parse returns an object and we are interested in the 'query' part of it
   let fullUrl = 'http://' + req.headers.host + req.url;
 
   var urlObject = new URL(fullUrl);
@@ -57,10 +54,6 @@ const requestListener = function (req, res) {
   let data = searchRecipes(searchString, recipesArray);
 
   if (pathname === '/api') {
-    // res.end('Hello, from Recipe Server!');
-    // Send the response as JSON:
-    // res.writeHead(200, {'Content-type': 'application/json'});
-    // replacing above
     let mimeType = mime.lookup('json');
     res.writeHead(200, {'Content-type': mimeType});
 
