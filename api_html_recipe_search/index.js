@@ -28,7 +28,7 @@ const template = `
        </ul>
 
        <form method='get' action="/">
-           <input name="search" placeholder="recipe name">
+           <input name="search" placeholder="Find Recipes">
            <button>Search</button>
        </form>
     </body>
