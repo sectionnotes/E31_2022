@@ -6,9 +6,8 @@
 const fs = require('fs');
 // I'll read in the file contents:
 const recipes = fs.readFileSync('recipes.json', 'utf8');
-// console.log('recipes ', recipes);
+
 // Now I'll parse the JSON to give me an array of objects:
 const recipesArray = JSON.parse(recipes);
-// console.log('recipies', recipesArray)
 
 module.exports = recipesArray;
