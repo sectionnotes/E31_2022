@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Recipe</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Recipe Details:</h1>
+    <h2><%= recipe.recipename %></h2>
+    <h2>Ingredients:</h2>
+    <ul>
+      <% for (let i=0; i<recipe.ingredient.length; i++) { %>
+        <li>
+          <%= recipe.ingredient[i].name %>
+        </li>
+      <% } %>
+    </ul>
+
+    <h2>Directions:</h2>
+    <ul>
+      <% for (let i=0; i<recipe.directions.length; i++) { %>
+        <li>
+          <%= recipe.directions[i] %>
+        </li>
+      <% } %>
+    </ul>
+    
+  </body>
+</html>
